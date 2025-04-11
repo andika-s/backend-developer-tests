@@ -5,14 +5,16 @@ require './helper.rb'
 
 srand(129)
 
-grid_size = 5
+grid_size = 100
 
 your_strategy = -> {
   game = Game.new(grid_size: grid_size)
 
-  you = YourPlayer.new(game: game, name: 'Unknown candidate')
+  you = YourPlayer.new(game: game, name: '1st candidate')
+  you2 = YourPlayer.new(game: game, name: '2nd candidate')
 
   game.add_player(you)
+  game.add_player(you2)
 
   game.start
 }
